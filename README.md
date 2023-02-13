@@ -21,7 +21,14 @@ window.close();
 var testData = "テスト";
 console.log(testData);
 console.log(window.testData);
-window.testData
+window.testData;
+
+var testData = {
+  value: "テスト"
+}
+console.log(testData);
+console.log(window.testData);
+window.testData;
 
 ■console
 console.log("一般タイプのログ情報を出力する");
@@ -35,6 +42,13 @@ function user() {
   console.log(this);
 }
 user();
+
+const user = {
+  action: function() {
+    console.log(this);
+  }
+}
+user.action();
 
 ■オブジェクト
 const action = {
