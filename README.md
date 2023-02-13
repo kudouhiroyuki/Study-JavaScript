@@ -62,6 +62,8 @@ const baseClass = new BaseClass();
 baseClass.getName();
 
 ＜------------------ call/apply　------------------＞
+※関数.call(this値, 引数1, 引数2…);
+※関数.apply(this値, [引数1, 引数2…]);
 ※引数でthis値を変更できる
 ※第一引数にnullやundefinedを指定すると、thisはグローバルオブジェクト（ブラウザはwindowオブジェクト）となる
 ※アロー関数はcall()やapply()の第一引数は無効となる（関数そのものがthisを所持していない）
