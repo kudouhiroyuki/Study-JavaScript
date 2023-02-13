@@ -62,6 +62,8 @@ class BaseClass {
 const baseClass = new BaseClass();
 baseClass.getName();
 
+■call/apply
+
 ■オブジェクト
 const action = {
   onSelect: () => {
