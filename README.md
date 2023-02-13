@@ -61,9 +61,10 @@ class BaseClass {
 const baseClass = new BaseClass();
 baseClass.getName();
 
-■call/apply
+＜------------------ call/apply　------------------＞
 ※引数でthis値を変更できる
 ※第一引数にnullやundefinedを指定すると、thisはグローバルオブジェクト（ブラウザはwindowオブジェクト）となる
+※アロー関数はcall()やapply()の第一引数は無効となる（関数そのものがthisを所持していない）
 const baseObj = { name: "工藤" };
 function sum(a, b) {
 　　　　console.log(this);
@@ -72,6 +73,13 @@ function sum(a, b) {
 sum.call(baseObj, 10, 20);
 sum.call(null, 10, 20);
 sum.apply(baseObj, [10, 20]);
+
+const baseObj = { name: "工藤" };
+const sum = () => {
+  console.log(this);
+};
+sum();
+sum.call(baseObj, 10, 20);
 
 ■bind
 const baseObj = { name: "工藤" };
