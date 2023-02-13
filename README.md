@@ -1,6 +1,5 @@
 ```
 ■window
-<script></script>の内では window.は省略できる（ window.alert() ⇨ alert() ）
 window
 window.self;
 window.history;
@@ -63,13 +62,24 @@ const baseClass = new BaseClass();
 baseClass.getName();
 
 ■call/apply
+※引数でthis値を変更できる
+※第一引数にnullやundefinedを指定すると、thisはグローバルオブジェクト（ブラウザはwindowオブジェクト）となる
+const baseObj = { name: "工藤" };
+function sum(a, b) {
+　　　　console.log(this);
+  console.log(`${this.name} ${a + b}`);
+}
+sum.call(baseObj, 10, 20);
+sum.call(null, 10, 20);
+sum.apply(baseObj, [10, 20]);
+
+■bind
 const baseObj = { name: "工藤" };
 function sum(a, b) {
   console.log(`${this.name} ${a + b}`);
 }
-sum.call(baseObj, 10, 20);
-sum.apply(baseObj, [10, 20]);
-sum.call(null, 10, 20);
+const result = sum.bind(baseObj, 10, 20);
+result();
 
 ■オブジェクト
 const action = {
