@@ -63,13 +63,13 @@ const baseClass = new BaseClass();
 baseClass.getName();
 
 ■call/apply
-const baseObj = { value: "名前" };
-function user(name) {
-  console.log(`${this.value} ${name}`);
+const baseObj = { name: "工藤" };
+function sum(a, b) {
+  console.log(`${this.name} ${a + b}`);
 }
-user.call(baseObj, "工藤");
-user.apply(baseObj, ["田中"]);
-user.apply(null, ["田中"]);
+sum.call(baseObj, 10, 20);
+sum.apply(baseObj, [10, 20]);
+sum.call(null, 10, 20);
 
 ■オブジェクト
 const action = {
