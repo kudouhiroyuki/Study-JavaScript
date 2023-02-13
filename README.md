@@ -63,6 +63,13 @@ const baseClass = new BaseClass();
 baseClass.getName();
 
 ■call/apply
+const baseObj = { value: "名前" };
+function user(name) {
+  console.log(`${this.value} ${name}`);
+}
+user.call(baseObj, "工藤");
+user.apply(baseObj, ["田中"]);
+user.apply(null, ["田中"]);
 
 ■オブジェクト
 const action = {
