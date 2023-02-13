@@ -50,6 +50,18 @@ const user = {
 }
 user.action();
 
+class BaseClass {
+  constructor() {
+    this.name = '名前'
+  }
+  getName() {
+    console.log(this);
+    console.log(this.name);
+  }
+}
+const baseClass = new BaseClass();
+baseClass.getName();
+
 ■オブジェクト
 const action = {
   onSelect: () => {
