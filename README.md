@@ -36,6 +36,15 @@ console.warn("コンソールに警告メッセージを出力する");
 console.error("コンソールにエラーメッセージを出力する");
 console.trace();
 
+
+＜------------------- オブジェクト　-------------------＞
+const action = {
+  onSelect: () => {
+    console.log("onSelect");
+  }
+}
+action.onSelect();
+
 ＜--------------------- this　---------------------＞
 ※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
 function user() {
@@ -93,14 +102,6 @@ function sum(a, b) {
 }
 const result = sum.bind(baseObj, 10, 20);
 result();
-
-■オブジェクト
-const action = {
-  onSelect: () => {
-    console.log("onSelect");
-  }
-}
-action.onSelect();
 
 ■Class
 class BaseClass {
