@@ -36,7 +36,7 @@ console.warn("コンソールに警告メッセージを出力する");
 console.error("コンソールにエラーメッセージを出力する");
 console.trace();
 
-■this
+＜--------------------- this　---------------------＞
 function user() {
   console.log(this);
 }
