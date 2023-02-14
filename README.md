@@ -37,6 +37,7 @@ console.error("コンソールにエラーメッセージを出力する");
 console.trace();
 
 ＜--------------------- this　---------------------＞
+※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
 function user() {
   console.log(this);
 }
