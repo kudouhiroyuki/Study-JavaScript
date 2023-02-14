@@ -43,12 +43,16 @@ const action = {
   onSelect1: function() {
     console.log("onSelect1");
   },
-  onSelect2: () => {
+  onSelect2() {
     console.log("onSelect2");
+  },
+  onSelect3: () => {
+    console.log("onSelect3");
   }
 }
 action.onSelect1();
 action.onSelect2();
+action.onSelect3();
 
 const action = {};
 action.onSelect1 = function() { console.log("onSelect1") };
