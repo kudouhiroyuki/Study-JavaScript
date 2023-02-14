@@ -63,9 +63,17 @@ action.onSelect2 = () => { console.log("onSelect2") };
 action.onSelect1();
 action.onSelect2();
 
-＜------------------- 関数リテラル　------------------＞
+＜--------------- 関数リテラル(無名関数)　-------------＞
+const user = function() {
+  console.log("名前");
+};
+user();
 
-＜--------------- Functionコンストラクタ　--------------＞
+const user = function() {
+  return "名前";
+};
+const result = user();
+console.log(result);
 
 ＜--------------------- this　---------------------＞
 ※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
