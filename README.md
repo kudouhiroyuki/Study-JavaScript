@@ -40,11 +40,21 @@ console.trace();
 ＜------------------- オブジェクト　-------------------＞
 ※メソッドとは、オブジェクトがプロパティとして持っている関数
 const action = {
-  onSelect: () => {
-    console.log("onSelect");
+  onSelect1: function() {
+    console.log("onSelect1");
+  },
+  onSelect2: () => {
+    console.log("onSelect2");
   }
 }
-action.onSelect();
+action.onSelect1();
+action.onSelect2();
+
+const action = {};
+action.onSelect1 = function() { console.log("onSelect1") };
+action.onSelect2 = () => { console.log("onSelect2") };
+action.onSelect1();
+action.onSelect2();
 
 ＜--------------------- this　---------------------＞
 ※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
