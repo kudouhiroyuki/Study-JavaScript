@@ -121,6 +121,9 @@ function sum(a, b) {
 const result = sum.bind(baseObj, 10, 20);
 result();
 
+＜------------------ arguments　-------------------＞
+
+
 ■Class
 class BaseClass {
   constructor(name) {
