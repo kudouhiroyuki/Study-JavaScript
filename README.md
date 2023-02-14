@@ -38,6 +38,7 @@ console.trace();
 
 
 ＜------------------- オブジェクト　-------------------＞
+※メソッドとは、オブジェクトがプロパティとして持っている関数
 const action = {
   onSelect: () => {
     console.log("onSelect");
