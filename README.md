@@ -63,6 +63,8 @@ action.onSelect2 = () => { console.log("onSelect2") };
 action.onSelect1();
 action.onSelect2();
 
+＜------------------- 関数リテラル　------------------＞
+
 ＜--------------------- this　---------------------＞
 ※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
 function user() {
@@ -121,8 +123,10 @@ function sum(a, b) {
 const result = sum.bind(baseObj, 10, 20);
 result();
 
-＜------------------ arguments　-------------------＞
-
+＜------------- arguments（可変長引数）　--------------＞
+※引数に渡ってきた全ての値を出力する
+※関数の中でのみ利用できるオブジェクト
+※アロー関数の中では使用できない
 
 ■Class
 class BaseClass {
