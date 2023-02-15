@@ -76,6 +76,11 @@ const result = user();
 console.log(result);
 
 ＜--------------------- 即時関数　------------------＞
+※スコープの汚染を防ぐために使用される
+const result = (function (param1, param2) {
+  return param1 + param2;
+}(1, 2));
+console.log(result);
 
 ＜--------------------- this　---------------------＞
 ※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
