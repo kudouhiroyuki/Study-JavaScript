@@ -77,6 +77,10 @@ console.log(result);
 
 ＜--------------------- 即時関数　------------------＞
 ※スコープの汚染を防ぐために使用される
+(function(){
+  console.log("result");
+})();
+
 const result = (function (param1, param2) {
   return param1 + param2;
 }(1, 2));
