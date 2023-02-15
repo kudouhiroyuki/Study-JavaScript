@@ -75,6 +75,8 @@ const user = function() {
 const result = user();
 console.log(result);
 
+＜--------------------- 即時関数　------------------＞
+
 ＜--------------------- this　---------------------＞
 ※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
 function user() {
