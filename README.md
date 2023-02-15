@@ -76,7 +76,6 @@ const result = user();
 console.log(result);
 
 ＜--------------------- 即時関数　------------------＞
-※スコープの汚染を防ぐために使用される
 (function(){
   console.log("結果");
 })();
