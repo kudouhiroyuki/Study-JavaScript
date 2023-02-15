@@ -137,6 +137,22 @@ result();
 ※引数に渡ってきた全ての値を出力する
 ※関数の中でのみ利用できるオブジェクト
 ※アロー関数の中では使用できない
+function user(){
+  console.log(arguments.length);
+  console.log(arguments[0]);
+  console.log(arguments[1]);
+}
+user(1, '名前');
+
+function sum() {
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    sum += arguments[i];
+  }
+  console.log(sum);
+}
+sum(1, 3, 5);
+sum(7, 12, 3, 2, 8);
 
 ■Class
 class BaseClass {
