@@ -87,14 +87,6 @@ console.log(result);
 
 ＜----------------- コールバック関数　-----------------＞
 function firstAction(callback) {
-  callback("result1");
-  callback("result2");
-}
-firstAction(function(result) {
-  console.log(result);
-});
-
-function firstAction(callback) {
   console.log('firstAction');
   callback();
 }
@@ -112,6 +104,14 @@ const secondAction = function(i) {
   console.log(i);
 };
 firstAction(secondAction);
+
+function firstAction(callback) {
+  callback("result1");
+  callback("result2");
+}
+firstAction(function(result) {
+  console.log(result);
+});
 
 ＜--------------------- this　---------------------＞
 function user() {
