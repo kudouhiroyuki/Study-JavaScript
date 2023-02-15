@@ -76,7 +76,7 @@ const result = user();
 console.log(result);
 
 ＜--------------------- 即時関数　------------------＞
-(function(){
+(function() {
   console.log("結果");
 })();
 
@@ -86,7 +86,16 @@ const result = (function (value) {
 console.log(result);
 
 ＜----------------- コールバック関数　-----------------＞
-
+function firstAction(callback) {
+  setTimeout(function() {
+    console.log('firstAction');
+    callback();
+  }, 2000)
+}
+function secondAction() {
+  console.log('secondAction');
+}
+firstAction(secondAction);
 
 ＜--------------------- this　---------------------＞
 ※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
