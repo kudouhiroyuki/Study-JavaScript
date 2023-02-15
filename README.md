@@ -87,10 +87,8 @@ console.log(result);
 
 ＜----------------- コールバック関数　-----------------＞
 function firstAction(callback) {
-  setTimeout(function() {
-    console.log('firstAction');
-    callback();
-  }, 2000)
+  console.log('firstAction');
+  callback();
 }
 function secondAction() {
   console.log('secondAction');
@@ -98,7 +96,6 @@ function secondAction() {
 firstAction(secondAction);
 
 ＜--------------------- this　---------------------＞
-※トップレベルにあるthisは、グローバルオブジェクトを参照する（windowオブジェクト）
 function user() {
   console.log(this);
 }
