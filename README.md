@@ -78,12 +78,12 @@ console.log(result);
 ＜--------------------- 即時関数　------------------＞
 ※スコープの汚染を防ぐために使用される
 (function(){
-  console.log("result");
+  console.log("結果");
 })();
 
-const result = (function (param1, param2) {
-  return param1 + param2;
-}(1, 2));
+const result = (function (value) {
+  return value;
+}("結果"));
 console.log(result);
 
 ＜--------------------- this　---------------------＞
