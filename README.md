@@ -95,6 +95,16 @@ function secondAction() {
 }
 firstAction(secondAction);
 
+function firstAction(callback) {
+  for(let i=1; i<=5; i++) {
+    callback(i);
+  }
+}
+const secondAction = function(i) {
+  console.log(i);
+};
+firstAction(secondAction);
+
 ＜--------------------- this　---------------------＞
 function user() {
   console.log(this);
