@@ -114,7 +114,13 @@ firstAction(function(result) {
 });
 
 ＜------------------- クロージャ　--------------------＞
-
+function parentAction() {
+  function childAction() {
+    console.log("result");
+  }
+  childAction();
+}
+parentAction();
 
 ＜--------------------- this　---------------------＞
 function user() {
