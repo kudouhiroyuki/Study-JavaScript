@@ -125,9 +125,9 @@ const result = parentAction();
 result();
 
 function parentAction() {
-  const result = "test";
+  const res = "テスト";
   function childAction() {
-    console.log(result);
+    console.log(res);
   }
   return childAction();
 }
