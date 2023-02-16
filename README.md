@@ -133,7 +133,7 @@ function parentAction() {
 }
 parentAction();
 
-＜--------------------- カリー化　-------------------＞
+＜----------------- カリー化(部分適用)　---------------＞
 function user(name) {
   return function (age) {
     console.log(name + age);
