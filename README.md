@@ -115,6 +115,16 @@ firstAction(function(result) {
 
 ＜------------------- クロージャ　--------------------＞
 function parentAction() {
+  const res = "テスト";
+  function childAction() {
+    console.log(res);
+  }
+  return childAction;
+}
+const result = parentAction();
+result();
+
+function parentAction() {
   const result = "test";
   function childAction() {
     console.log(result);
