@@ -113,6 +113,9 @@ firstAction(function(result) {
   console.log(result);
 });
 
+＜------------------- クロージャ　--------------------＞
+
+
 ＜--------------------- this　---------------------＞
 function user() {
   console.log(this);
