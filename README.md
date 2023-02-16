@@ -139,11 +139,6 @@ const baseClass = new BaseClass();
 baseClass.getName();
 
 ＜------------------ call/apply　------------------＞
-※関数.call(this値, 引数1, 引数2…);
-※関数.apply(this値, [引数1, 引数2…]);
-※引数でthisの参照先を指定できる
-※第一引数にnullやundefinedを指定すると、thisはグローバルオブジェクト（ブラウザはwindowオブジェクト）となる
-※アロー関数はcall()やapply()の第一引数は無効となる（関数そのものがthisを所持していない）
 const baseObj = { name: "工藤" };
 function sum(a, b) {
   console.log(this);
