@@ -134,6 +134,13 @@ function parentAction() {
 parentAction();
 
 ＜--------------------- カリー化　-------------------＞
+function user(name) {
+  return function (age) {
+    console.log(name + age);
+  }
+}
+user("名前")(30); 
+
 const sum = function (a) {
   return function (b) {
     return a + b;
