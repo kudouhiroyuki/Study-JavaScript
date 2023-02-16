@@ -134,8 +134,13 @@ function parentAction() {
 parentAction();
 
 ＜--------------------- カリー化　-------------------＞
-
-
+const sum = function (a) {
+  return function (b) {
+    return a + b;
+  };
+}
+const result = sum(1)(2);
+console.log(result);
 
 ＜--------------------- this　---------------------＞
 function user() {
