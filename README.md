@@ -141,20 +141,12 @@ function sum(first) {
 }
 sum(1)(2); 
 
-function user(name) {
-  return function(age) {
-    console.log(name + age);
-  }
-}
-user("名前")(30); 
-
-const sum = function(a) {
-  return function(b) {
-    return a + b;
+const sum = function(first) {
+  return function(second) {
+    return first + second;
   };
 }
 const result = sum(1)(2);
-console.log(result);
 
 ＜--------------------- this　---------------------＞
 function user() {
