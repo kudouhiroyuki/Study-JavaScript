@@ -134,15 +134,22 @@ function parentAction() {
 parentAction();
 
 ＜----------------- カリー化(部分適用)　---------------＞
+function sum(first) {
+  return function (second) {
+    return first + second;
+  }
+}
+sum(1)(2); 
+
 function user(name) {
-  return function (age) {
+  return function(age) {
     console.log(name + age);
   }
 }
 user("名前")(30); 
 
-const sum = function (a) {
-  return function (b) {
+const sum = function(a) {
+  return function(b) {
     return a + b;
   };
 }
