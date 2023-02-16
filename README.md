@@ -135,7 +135,7 @@ parentAction();
 
 ＜----------------- カリー化(部分適用)　---------------＞
 function sum(first) {
-  return function (second) {
+  return function(second) {
     return first + second;
   }
 }
