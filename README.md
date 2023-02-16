@@ -157,7 +157,7 @@ sum.call(baseObj, 10, 20);
 sum.call(null, 10, 20);
 sum.apply(baseObj, [10, 20]);
 
-■bind
+＜--------------------- bind　---------------------＞
 const baseObj = { name: "工藤" };
 function sum(a, b) {
   console.log(`${this.name} ${a + b}`);
