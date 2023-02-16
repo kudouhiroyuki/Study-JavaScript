@@ -133,6 +133,10 @@ function parentAction() {
 }
 parentAction();
 
+＜--------------------- カリー化　-------------------＞
+
+
+
 ＜--------------------- this　---------------------＞
 function user() {
   console.log(this);
