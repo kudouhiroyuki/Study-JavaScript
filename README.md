@@ -117,7 +117,7 @@ firstAction(function(result) {
 function parentAction() {
   const result = "test";
   function childAction() {
-    console.log("test");
+    console.log(result);
   }
   return childAction();
 }
